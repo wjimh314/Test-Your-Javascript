@@ -2,10 +2,10 @@
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
 var question = document.getElementById("question");
-const choicesA = document.getElementById("choicesa");
-const choicesB = document.getElementById("choicesb");
-const choicesC = document.getElementById("choicesc");
-const choicesD = document.getElementById("choicesd");
+const choicesA = document.getElementById("choicesA");
+const choicesB = document.getElementById("choicesB");
+const choicesC = document.getElementById("choicesC");
+const choicesD = document.getElementById("choicesD");
 const counter=document.getElementById("counter");
 const timegauge=document.getElementById("timegauge");
 /* declared varibles that will be in use through program */
