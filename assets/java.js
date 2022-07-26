@@ -1,14 +1,13 @@
 /*Elements being used*/
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
-var question = document.getElementById("question");
+const question = document.getElementById("question");
 const choicesA = document.getElementById("choicesA");
 const choicesB = document.getElementById("choicesB");
 const choicesC = document.getElementById("choicesC");
 const choicesD = document.getElementById("choicesD");
-const counter=document.getElementById("counter");
+const timer=document.getElementById("timer");
 const timegauge=document.getElementById("timegauge");
-/* declared varibles that will be in use through program */
 
 
 let questions = [
@@ -59,7 +58,12 @@ let questions = [
         correct :d,
     }
 ]
+
 const lastQuestion = questions.length - 1;
+
+
+
+
 
 let runningQuestion = 0;
 function renderQuestion(){
@@ -70,7 +74,6 @@ function renderQuestion(){
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
 }
-start.style.display="none";
-renderQuestion();
-quiz.style.display="block";
 start.addEventListener("click",start);
+function startQ(){
+    start.style.display = "none";}
