@@ -3,7 +3,7 @@ body{background-color:white;
 #container{
    margin : 20px auto;
    background-color: white;
-   height: 300px;
+   height: 479px;
    width : 700px;
    border-radius: 5px;
    box-shadow: 0px 5px 15px 0px;
@@ -14,7 +14,7 @@ body{background-color:white;
    font-weight: bolder;
    word-break: break-all;
    width:100px;
-   height:42px;
+   height:31px;
    border : 2px solid lightgrey;
    text-align: center;
    cursor: pointer;
@@ -37,3 +37,30 @@ body{background-color:white;
    top:5px
 
 }
+.questions {width:500px;
+   height : 50px;
+   position: absolute;
+   right:89px;
+   top:164px;
+   background-color:  #3a0a5d;
+}
+ .choices {
+   height:50px;
+   width:192px;
+   position:absolute;
+   right:20px;
+   top:238px;
+   background-color:  #3a0a5d;
+   }
+   .choicesa {
+      height:50px;
+      width:192px;
+      position:absolute;
+      right:20px;
+      top:238px;
+      background-color:  #3a0a5d;
+      }
+   
+
+   
+

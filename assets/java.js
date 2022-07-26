@@ -1,50 +1,92 @@
-/* declared variables that will be selected*/
-
-var questionsElement= document.queryselctor('questions');
-var correctElement=document.queryselctor("correct");
-var incorrectElement=document.queryselctor("incorrect");
-var timerElement=document.queryselctor("timer-count");
-var startElement=document.queryselctor("start");
-var highscoreElement=document.queryselector("High-scores");
-
+/*Elements being used*/
+const start = document.getElementById("start");
+const quiz = document.getElementById("quiz");
+var questions = document.getElementById("questions");
+const choicesA = document.getElementById("choicesa");
+const choicesB = document.getElementById("choicesb");
+const choicesC = document.getElementById("choicesc");
+const choicesD = document.getElementById("choicesd");
+const counter=document.getElementById("counter");
+const timegauge=document.getElementById("timegauge");
 /* declared varibles that will be in use through program */
-var awnsers =[]
-var scorekeeper=0;
-var seconds=0;
-var countdownTimer;
-console.log()
 
-  /* declared variables for questions*/  
- var start= document.getElementById("start");
- start.addEventListener("click", startQuiz);
-let timer;
- function startQuiz(){
-    start.style.display="none";
-    counterRender();
-    timer= SetInnterval(counterRender,1000);
-    progressRender();
-    questionRender ();
-    startQuiz.style.display="block";
- }
 
+let question = [
+
+    {
+         question : "A very useful tool used durning development and debugging for printing content to the debugger is?,
 
     
 
-  var questions = [
+        choiceA : "JavaScript",
 
-        {
-    
-            question : "What does HTML stand for?",
-    
+        choiceB : "terminal/bash",
+
+        choiceC : "for loops",
+
+        choiceD : "console.log"
+
+        correct: "D"
+
+    },{
+        question:"commonly used data types DO not include?"
+        choiceA : strings
+        choiceb: booleans
+        choiceC : alerts
+        choiceD : numbers
+        correct :c
+    },{ 
+        question:"string values must be enclosed within____when being assigned to variables."
+        choiceA : commas
+        choiceb: curly brackets
+        choiceC : qoute
+        choiceD : parenthesis 
+        correct :c
         
+    },{
+        question:"commonly used data types DO not include?"
+        choiceA : strings
+        choiceb: booleans
+        choicec : alerts
+        choiced : numbers
+        correct :c
+    },  {
+        question:"The condition in an if/else statement is enclosed with _____"
+        choiceA : qoutes
+        choiceb: curly brackets
+        choiceC : parenthesis
+        choiceD : square brackets
+        correct :d
+    }
+
+ 
+    function renderQuestion(){
+        let q = questions[runningQuestion];
     
-            choiceA : "Correct",
+        question.innerHTML = "<p>"+ q.question +"</p>";
+        qImg.innerHTML = "<img src="+ q.imgSrc +">";
+        choiceA.innerHTML = q.choiceA;
+        choiceB.innerHTML = q.choiceB;
+        choiceC.innerHTML = q.choiceC;
+    }
     
-            choiceB : "Wrong",
+    start.addEventListener("click",startQuiz);
     
-            choiceC : "Wrong",
+    // start quiz
+    function startQuiz(){
+        start.style.display = "none";
+        renderQuestion();
+        quiz.style.display = "block";
+        renderProgress();
+        renderCounter();
+        TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+    }
+
+
     
-            correct : "A"
-    
-        }
+
+  
 ]
+/*variables*/
+
+Let
