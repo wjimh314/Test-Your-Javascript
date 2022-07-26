@@ -37,29 +37,25 @@ body{background-color:white;
    top:5px
 
 }
-.questions {width:500px;
-   height : 50px;
+#question{
+   width:500px;
+   height : 125px;
    position: absolute;
-   right:89px;
-   top:164px;
-   background-color:  #3a0a5d;
+   right:0;
+   top:0;
 }
- .choices {
-   height:50px;
-   width:192px;
-   position:absolute;
-   right:20px;
-   top:238px;
-   background-color:  #3a0a5d;
-   }
-   .choicesa {
-      height:50px;
-      width:192px;
-      position:absolute;
-      right:20px;
-      top:238px;
-      background-color:  #3a0a5d;
-      }
+#question p{
+   margin : 0;
+   padding : 15px;
+   font-size: 1.25em;}
+.choice{
+   display: inline-block;
+   width : 135px;
+   text-align: center;
+   border : 1px solid grey;
+   border-radius: 5px;
+   cursor: pointer;
+   padding : 5px;}
    
 
    
