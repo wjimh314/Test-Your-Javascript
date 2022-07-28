@@ -76,12 +76,15 @@ function renderquestion(){
 console.log("renderquestion")
 let q = questions[runningQuestion];
   question.innerHTML = "<p>"+ q.question +"</p>";
-     choiceA.innerHTML = q.choiceA;
-     choiceB.innerHTML = q.choiceB;
-     choiceC.innerHTML = q.choiceC;
-     choiceD.innerHTML = q.choiceD;
-}
+     choicesA.innerHTML = q.choiceA;
+     choicesB.innerHTML = q.choiceB;
+     choicesC.innerHTML = q.choiceC;
+     choicesD.innerHTML = q.choiceD;
 
+    }
+
+
+    
 
  
 
