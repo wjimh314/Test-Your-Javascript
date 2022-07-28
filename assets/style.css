@@ -57,7 +57,7 @@ body{background-color:white;
    background-color:  #3a0a5d;
    color:white;}
    
-   #choicesA{
+   #choicesB{
       font-size: 1.5em;
       font-weight: bolder;
       word-break: break-all;
@@ -68,9 +68,36 @@ body{background-color:white;
       cursor: pointer;
       position: absolute;
       left:491px;
-      top:179px;
+      top:227px;
       background-color:  #3a0a5d;
       color:white;}
-
+      
+   #choicesC{
+         font-size: 1.5em;
+         font-weight: bolder;
+         word-break: break-all;
+         width:181px;
+         height:31px;
+         border : 2px solid lightgrey;
+         text-align: center;
+         cursor: pointer;
+         position: absolute;
+         left:491px;
+         top:273px;
+         background-color:  #3a0a5d;
+         color:white;}
    
-
+   #choicesD{
+            font-size: 1.5em;
+            font-weight: bolder;
+            word-break: break-all;
+            width:181px;
+            height:31px;
+            border : 2px solid lightgrey;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            left:491px;
+            top:328px;
+            background-color:  #3a0a5d;
+            color:white;}

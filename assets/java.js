@@ -1,14 +1,15 @@
-/*Elements being used*/
+    /*Elements being used*/
 const start = document.getElementById("start");
-const quiz = document.getElementById("quiz");
+const questionbox = document.getElementById("questionbox");
 const question = document.getElementById("question");
 const choicesA = document.getElementById("choicesA");
 const choicesB = document.getElementById("choicesB");
 const choicesC = document.getElementById("choicesC");
 const choicesD = document.getElementById("choicesD");
 const timer=document.getElementById("timer");
-const timegauge=document.getElementById("timegauge");
-
+const instructions= document.getElementById("instructions");
+console.log(start)
+let runningQuestion = 0;
 
 let questions = [
 
@@ -29,51 +30,68 @@ let questions = [
 
     },{
         question:"commonly used data types DO not include?",
-        choiceA : strings,
-        choiceb: booleans,
-        choiceC : alerts,
-        choiceD : numbers,
-        correct :c,
+        choiceA : "strings",
+        choiceb: "booleans",
+        choiceC : "alerts",
+        choiceD : "numbers",
+        correct :"c",
     },{ 
         question:"string values must be enclosed within____when being assigned to variables.",
-        choiceA : commas,
-        choiceb: curly-brackets,
-        choiceC : qoute,
-        choiceD : parenthesis, 
-        correct :c,
+        choiceA : "commas",
+        choiceb: "curly-brackets",
+        choiceC : "qoute",
+        choiceD : "parenthesis", 
+        correct :"c",
         
     },{
         question:"commonly used data types DO not include?",
-        choiceA : strings,
-        choiceb: booleans,
-        choicec : alerts,
-        choiced : numbers,
-        correct :c
+        choiceA : "strings",
+        choiceb: "booleans",
+        choicec : "alerts",
+        choiced : "numbers",
+        correct :"c"
     },  {
         question:"The condition in an if/else statement is enclosed with _____",
-        choiceA : qoutes,
-        choiceb: curly-brackets,
-        choiceC : parenthesis,
-        choiceD : square-brackets,
-        correct :d,
+        choiceA : "qoutes",
+        choiceb: "curly-brackets",
+        choiceC : "parenthesis",
+        choiceD : "square brackets",
+        correct :"d",
     }
 ]
 
-const lastQuestion = questions.length - 1;
-
-
-
-
-
-let runningQuestion = 0;
-function renderQuestion(){
-
-    let q = questions[runningQuestion];
-    question.innerHTML = "<p>"+ q.question +"</p>";
-    choiceA.innerHTML = q.choiceA;
-    choiceB.innerHTML = q.choiceB;
-    choiceC.innerHTML = q.choiceC;
+function starttimer(){
+console.log("timerstart")
+let time=70
+const countdown=setInterval(() =>{
+time--
+timer.textContent=time
+},1000)
 }
-start.addEventListener("click",start);
-function startQ(){
-    start.style.display = "none";}
+function renderquestion(){
+console.log("renderquestion")
+}
+
+
+
+
+
+// function renderQuestion(){
+
+//     let q = questions[runningQuestion];
+//     question.innerHTML = "<p>"+ q.question +"</p>";
+//     choiceA.innerHTML = q.choiceA;
+//     choiceB.innerHTML = q.choiceB;
+//     choiceC.innerHTML = q.choiceC;
+// }
+
+function startquiz(){ 
+    console.log("click")
+   instructions.style.display="none"
+   start.style.display="none"
+   questionbox.style.display="block"
+starttimer()
+renderquestion()
+}
+
+start.addEventListener('click', startquiz)
