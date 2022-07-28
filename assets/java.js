@@ -11,6 +11,8 @@ const instructions= document.getElementById("instructions");
 console.log(start)
 let runningQuestion = 0;
 
+/* qustions being used*/
+
 let questions = [
 
     {
@@ -60,6 +62,8 @@ let questions = [
     }
 ]
 
+/*timer function*/
+
 function starttimer(){
 console.log("timerstart")
 let time=70
@@ -70,9 +74,16 @@ timer.textContent=time
 }
 function renderquestion(){
 console.log("renderquestion")
+let q = questions[runningQuestion];
+  question.innerHTML = "<p>"+ q.question +"</p>";
+     choiceA.innerHTML = q.choiceA;
+     choiceB.innerHTML = q.choiceB;
+     choiceC.innerHTML = q.choiceC;
+     choiceD.innerHTML = q.choiceD;
 }
 
 
+ 
 
 
 
