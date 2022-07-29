@@ -74,9 +74,11 @@ time--
 timer.textContent=time
 },1000)
 }
+const lastquestion=question.length -1;
+
 function renderquestion(){
 console.log("renderquestion")
-let q = questions[runningQuestion];
+let q = questions[runningQuestion++];
   question.innerHTML = "<p>"+ q.question +"</p>";
      choicesA.innerHTML = q.choiceA;
      choicesB.innerHTML = q.choiceB;
@@ -85,10 +87,17 @@ let q = questions[runningQuestion];
 
     }
 
-    let button = document.querySelector(".awnser");
+    
+   
+    
+    
+    let button = document.querySelector(".answer");
 button.addEventListener('click', function() {
-  console.log('Clicked!');
-});
+    const lastQuestion = questions.length - 1;
+ 
+    console.log('Clicked!');
+}); 
+
 
 
     
@@ -97,14 +106,9 @@ button.addEventListener('click', function() {
 
 
 
-// function renderQuestion(){
 
-//     let q = questions[runningQuestion];
-//     question.innerHTML = "<p>"+ q.question +"</p>";
-//     choiceA.innerHTML = q.choiceA;
-//     choiceB.innerHTML = q.choiceB;
-//     choiceC.innerHTML = q.choiceC;
-// }
+
+
 
 function startquiz(){ 
     console.log("click")
