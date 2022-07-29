@@ -74,11 +74,11 @@ time--
 timer.textContent=time
 },1000)
 }
-const lastquestion=question.length -1;
-
+let lastquestionIndex=question.length -1;
+let runningQuestionIndex=0
 function renderquestion(){
 console.log("renderquestion")
-let q = questions[runningQuestion++];
+let q = questions[runningQuestionIndex++];
   question.innerHTML = "<p>"+ q.question +"</p>";
      choicesA.innerHTML = q.choiceA;
      choicesB.innerHTML = q.choiceB;
@@ -93,8 +93,7 @@ let q = questions[runningQuestion++];
     
     let button = document.querySelector(".answer");
 button.addEventListener('click', function() {
-    const lastQuestion = questions.length - 1;
- 
+    
     console.log('Clicked!');
 }); 
 
