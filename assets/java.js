@@ -33,14 +33,14 @@ let questions = [
     },{
         question:"commonly used data types DO not include?",
         choiceA : "strings",
-        choiceb: "booleans",
+        choiceB: "booleans",
         choiceC : "alerts",
         choiceD : "numbers",
         correct :"c",
     },{ 
         question:"string values must be enclosed within____when being assigned to variables.",
         choiceA : "commas",
-        choiceb: "curly-brackets",
+        choiceB: "curly-brackets",
         choiceC : "qoute",
         choiceD : "parenthesis", 
         correct :"c",
@@ -48,18 +48,20 @@ let questions = [
     },{
         question:"commonly used data types DO not include?",
         choiceA : "strings",
-        choiceb: "booleans",
+        choiceB: "booleans",
         choicec : "alerts",
         choiced : "numbers",
         correct :"c"
     },  {
         question:"The condition in an if/else statement is enclosed with _____",
         choiceA : "qoutes",
-        choiceb: "curly-brackets",
+        choiceB: "curly-brackets",
         choiceC : "parenthesis",
         choiceD : "square brackets",
         correct :"d",
     }
+    
+
 ]
 
 /*timer function*/
@@ -82,6 +84,11 @@ let q = questions[runningQuestion];
      choicesD.innerHTML = q.choiceD;
 
     }
+
+    let button = document.querySelector(".awnser");
+button.addEventListener('click', function() {
+  console.log('Clicked!');
+});
 
 
     
