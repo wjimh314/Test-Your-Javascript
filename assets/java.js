@@ -91,11 +91,13 @@ let q = questions[runningQuestionIndex++];
    
     
     
-    let button = document.querySelector(".answer");
+    let button = document.getElementById("questionbox");
 button.addEventListener('click', function() {
-    
+    renderquestion()
     console.log('Clicked!');
 }); 
+
+
 
 
 
