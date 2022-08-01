@@ -69,9 +69,13 @@ let questions = [
 function starttimer(){
 console.log("timerstart")
 let time=70
+
 const countdown=setInterval(() =>{
-time--
-timer.textContent=time
+time--;
+timer.textContent=time;
+if(time===0) {
+    clearInterval(countdown);
+}
 },1000)
 }
 let lastquestionIndex=question.length -1;
