@@ -1,4 +1,5 @@
 # Test-Your-Javascript
+
 GIVEN I am taking a code quiz
 WHEN I click the start button
 THEN a timer starts and I am presented with a question
@@ -11,4 +12,8 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 
+github url:
+https://github.com/wjimh314/Test-Your-Javascript
 
+live url:
+https://wjimh314.github.io/Test-Your-Javascript/
